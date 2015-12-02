@@ -268,7 +268,15 @@ class Webservices {
 	public function getToken() {
 		$this->operation = 'get_token';
 		$this->_Fetch();
-		return $this->_Populate();
+		$this->_Populate();
+		
+		if($this->status){
+			$this->token = $this->data->token;
+			
+			return true;
+		}
+		
+		return false;
 	}
 
 	/**
