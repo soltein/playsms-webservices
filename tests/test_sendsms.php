@@ -19,7 +19,8 @@ echo "\n";
 if ($ws->getStatus()) {
 
 	echo "Send SMS:\n";
-	$ws->token = $ws->getData()->token;
+	//Transferido para a propria API WEBSERVICE.PHP
+	//$ws->token = $ws->getData()->token;
 	$ws->to = '0987654321,0987654322';
 	$ws->msg = 'This is a test from webservices ' . time();
 	$ws->sendSms();
